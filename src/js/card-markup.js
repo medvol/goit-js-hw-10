@@ -20,7 +20,7 @@ function createTenCountries(countries) {
             <div class="country-list__image">
                 <img  src="${flags.svg}" alt="flag ${name.official}">
             </div>
-            <p class="country-list__name">${name.official}</p>
+            <p class="country-list__name">${name.common}</p>
          </li>
         `
             , '');
@@ -36,9 +36,3 @@ function addMarkup(markup, element) {
 export { createOneCountry, createTenCountries, addMarkup }
 
 
-// {/* <div class = "country-wrapper">
-//         <div class = "country-flag-wrapper">
-//         <img class = "country-flag" src = "${flags.svg}" alt = "${name.official}">
-//         </div>
-//         <p class = "country-name"> ${name.common} </p>
-//         </div> */}

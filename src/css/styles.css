@@ -39,6 +39,12 @@ p,ul,li{
 
   font-size: 14px;
   font-weight: 600;  
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.country-list__item:hover{
+  transform: scale(1.05);
 }
 
 .country-list__image{
@@ -49,6 +55,7 @@ p,ul,li{
 .country-info{  
   max-width: 200px;
   padding: 10px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
  
 }
 
