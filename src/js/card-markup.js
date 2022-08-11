@@ -27,10 +27,8 @@ function createTenCountries(countries) {
     
 }
 
-function addMarkup(markup, element) {
- 
-   element.insertAdjacentHTML('beforeend', markup)
-    
+function addMarkup(markup, element) { 
+    element.insertAdjacentHTML('beforeend', markup);    
 }
 
 export { createOneCountry, createTenCountries, addMarkup }

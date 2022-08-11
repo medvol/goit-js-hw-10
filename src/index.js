@@ -14,18 +14,14 @@ input.addEventListener('input', debounce(handleSearchCountry, DEBOUNCE_DELAY));
 
 function handleSearchCountry(event) {
     const searchValue = event.target.value.trim();
-    countryList.innerHTML = '';
-    countryInfo.innerHTML = '';
-    if (!searchValue) {
-        return 
-    }
+    updateUI();
+    if (!searchValue) return;
+    
     fetchCountries(searchValue)
         .then(data => {
-            if (data.length === 1) {
-                
+            if (data.length === 1) {                
                 const markup = createOneCountry(data[0]);             
-                addMarkup(markup, countryInfo);
-                
+                addMarkup(markup, countryInfo);                
             };
 
             if (data.length > 1 && data.length <= 10) {
@@ -40,5 +36,10 @@ function handleSearchCountry(event) {
         })
     .catch(error => Notify.failure(`${error}`))
     
+}
+
+function updateUI() {
+    countryList.innerHTML = '';
+    countryInfo.innerHTML = '';
 }
 
